@@ -1,0 +1,9 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: "EmployeeApplication"
+  devtools:
+    add-properties: false
+repository:
+  endpoint: "https://dummy.restapiexample.com/api/v1"
