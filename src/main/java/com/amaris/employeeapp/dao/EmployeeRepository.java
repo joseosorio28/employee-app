@@ -1,11 +1,13 @@
 package com.amaris.employeeapp.dao;
 
-import com.amaris.employeeapp.dao.entities.Response;
-import org.springframework.http.ResponseEntity;
+import com.amaris.employeeapp.model.Employee;
+
+import java.util.List;
 
 public interface EmployeeRepository {
 
-    String getEmployee(String id);
-    String getEmployees();
+    Employee getEmployee(String id);
+
+    List<Employee> getEmployees();
 
 }

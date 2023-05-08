@@ -7,3 +7,5 @@ spring:
     add-properties: false
 repository:
   endpoint: "https://dummy.restapiexample.com/api/v1"
+  resource: "/employee/"
+  resources: "/employees"

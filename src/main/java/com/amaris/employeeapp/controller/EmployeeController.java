@@ -1,37 +1,20 @@
 package com.amaris.employeeapp.controller;
 
-import com.amaris.employeeapp.dao.EmployeeRepository;
-import com.amaris.employeeapp.model.Employee;
-import com.amaris.employeeapp.service.EmployeeService;
+import com.amaris.employeeapp.model.EmployeeDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
-import javax.websocket.server.PathParam;
+import java.util.List;
 
-@RestController
-@RequestMapping(value = "api/v1.0")
-public class EmployeeController {
+@RequestMapping(value = "default")
+public interface EmployeeController {
 
-    private final EmployeeService employeeService;
+    @GetMapping("employee/{id}")
+    ResponseEntity<EmployeeDto> getEmployee(@PathVariable("id") String id);
 
-    public EmployeeController(EmployeeService employeeService) {
-        this.employeeService = employeeService;
-    }
-
-    @GetMapping("/employee/{id}")
-    @ResponseBody
-    public ResponseEntity<Employee> getEmployee(
-            @PathParam("id") String employeeId){
-        return employeeService.getEmployee(employeeId);
-    }
-
-    @GetMapping("/employee")
-    @ResponseBody
-    public ResponseEntity<Employee> getEmployees(){
-        return employeeService.getEmployees();
-    }
+    @GetMapping("employee")
+    ResponseEntity<List<EmployeeDto>> getEmployees();
 
 }
