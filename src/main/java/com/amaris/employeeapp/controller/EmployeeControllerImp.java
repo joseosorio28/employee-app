@@ -1,9 +1,10 @@
 package com.amaris.employeeapp.controller;
 
-import com.amaris.employeeapp.model.EmployeeDto;
 import com.amaris.employeeapp.business.EmployeeService;
+import com.amaris.employeeapp.model.EmployeeDto;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -21,7 +22,7 @@ public class EmployeeControllerImp implements EmployeeController {
         return employeeService.getEmployee(employeeId);
     }
 
-    public ResponseEntity<List<EmployeeDto>>  getEmployees() {
+    public ResponseEntity<List<EmployeeDto>> getEmployees() {
         return employeeService.getEmployees();
     }
 
