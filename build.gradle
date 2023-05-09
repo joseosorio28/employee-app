@@ -54,7 +54,8 @@ jacocoTestReport {
 					"**/advisor/**",
 					"**/utils/**",
 					"**/config/**",
-					"**/*Application.class"
+					"**/*Application.class",
+					"**/*ServletInitializer.class"
 			])
 		}))
 	}
@@ -69,7 +70,8 @@ jacocoTestCoverageVerification {
 					"**/advisor/**",
 					"**/utils/**",
 					"**/config/**",
-					"**/*Application.class"
+					"**/*Application.class",
+					"**/*ServletInitializer.class"
 			])
 		}))
 	}

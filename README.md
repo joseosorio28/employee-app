@@ -46,18 +46,18 @@ To run the application locally for development or testing purposes, you can use 
 gradle bootRun
 ```
 
-This command will start an embedded Tomcat server and deploy the application on it. You can access the application by opening a web browser and navigating to http://localhost:8080 (or the port specified in the configuration).
+This command will start an embedded Tomcat server and deploy the application on it. You can access the application by opening a web browser and navigating to http://localhost:8081 (or the port specified in the configuration).
 
 ## API Documentation
 
 The application uses OpenAPI documentation:
 
-- The Swagger UI page will then be available at http(s)://server:port/swagger-ui.html (ex: http://localhost:8080/swagger-ui.html) 
-- The OpenAPI description will be available in json format at http(s)://server:port/v3/api-docs (ex: http://localhost:8080/v3/api-docs)
+- The Swagger UI page will then be available at http(s)://server:port/swagger-ui.html (ex: http://localhost:8081/swagger-ui.html) 
+- The OpenAPI description will be available in json format at http(s)://server:port/v3/api-docs (ex: http://localhost:8081/v3/api-docs)
 
 Important:
 - server: The server name or IP were the application is hosted (Run locally as localhost)
-- port: The server port in which the application is running (default port is 8080)
+- port: The server port in which the application is running (default port is 8081)
 
 ## Troubleshooting
 If you encounter any issues while setting up or running the application, here are a few common troubleshooting steps:
